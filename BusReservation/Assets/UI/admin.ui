@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>A</class>
+ <widget class="QWidget" name="A">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>712</width>
+    <height>787</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QGroupBox" name="addPlanGB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>391</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Add Plan</string>
+   </property>
+   <widget class="QSplitter" name="splitter_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>371</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="originLabel">
+      <property name="text">
+       <string>Origin:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="originCombo"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="destinationLabel">
+      <property name="text">
+       <string>Destination:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="destCombo"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="busLabel">
+      <property name="text">
+       <string>Available Bus:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="busCombo"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="dptLabel">
+      <property name="text">
+       <string>Departure:</string>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="dptDatePicker"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_5">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="arvLabel">
+      <property name="text">
+       <string>Arrival:</string>
+      </property>
+     </widget>
+     <widget class="QDateTimeEdit" name="arvDatePicker"/>
+    </widget>
+    <widget class="QPushButton" name="addPlanBtn">
+     <property name="text">
+      <string>Add Plan</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="addCityGB">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>10</y>
+     <width>281</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Add City</string>
+   </property>
+   <widget class="QSplitter" name="splitter_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>251</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter_7">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="cityNameLabel">
+      <property name="text">
+       <string>Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="cityNameLineEdit"/>
+    </widget>
+    <widget class="QPushButton" name="addCityButton">
+     <property name="text">
+      <string>Add City</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="addBusGB">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>110</y>
+     <width>281</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Add Bus</string>
+   </property>
+   <widget class="QSplitter" name="splitter_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>261</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QSplitter" name="splitter_9">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="driverNameLabel">
+      <property name="text">
+       <string>Driver Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="driverNameLineEdit"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_10">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QLabel" name="capacityLabel">
+      <property name="text">
+       <string>Capacity:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="capacitySpin">
+      <property name="minimum">
+       <number>20</number>
+      </property>
+      <property name="maximum">
+       <number>50</number>
+      </property>
+      <property name="singleStep">
+       <number>5</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="addBusBtn">
+     <property name="text">
+      <string>Add Bus</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="planGB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>681</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Plans List</string>
+   </property>
+   <widget class="QSplitter" name="splitter_12">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>661</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QTableWidget" name="planTable"/>
+    <widget class="QPushButton" name="deletePlanBtn">
+     <property name="text">
+      <string>Delete Plan</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="cityGB">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>260</y>
+     <width>281</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>City List</string>
+   </property>
+   <widget class="QSplitter" name="splitter_13">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>256</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QTableWidget" name="cityTable"/>
+    <widget class="QPushButton" name="deleteCityBtn">
+     <property name="text">
+      <string>Delete City</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="busGB">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>430</y>
+     <width>281</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Bus List</string>
+   </property>
+   <widget class="QSplitter" name="splitter_14">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>256</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QTableWidget" name="busTable"/>
+    <widget class="QPushButton" name="deleteBusBtn">
+     <property name="text">
+      <string>Delete Bus</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="reserveGB">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>391</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Reservation List</string>
+   </property>
+   <widget class="QSplitter" name="splitter_15">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>371</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <widget class="QTableWidget" name="reserveTable"/>
+    <widget class="QPushButton" name="deleteReservationBtn">
+     <property name="text">
+      <string>Delete Reservation</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
