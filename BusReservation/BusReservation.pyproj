@@ -34,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
+    <Folder Include="Assets\ScreenShots\" />
     <Folder Include="Assets\UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
