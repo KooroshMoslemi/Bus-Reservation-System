@@ -2,6 +2,7 @@ import sys
 from PyQt5 import QtCore, QtWidgets
 from UserPanel import UserWindow
 from AdminPanel import AdminWindow
+from Register import RegisterWindow
 from PyQt5.QtSql import QSqlQuery,QSqlDatabase
 from util import *
 
@@ -12,7 +13,7 @@ class Login(QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
         self.setWindowTitle('Login')
         self.setObjectName('Login')
-        self.resize(294, 168)
+        self.resize(294, 203)
         self.splitter = QtWidgets.QSplitter(self)
         self.splitter.setGeometry(QtCore.QRect(20, 10, 261, 141))
         self.splitter.setOrientation(QtCore.Qt.Vertical)
@@ -42,12 +43,16 @@ class Login(QtWidgets.QWidget):
         self.horizontalLayout_2.addWidget(self.passwordLineEdit)
         self.loginButton = QtWidgets.QPushButton(self.splitter)
         self.loginButton.setObjectName("loginButton")
+        self.registerLink = QtWidgets.QCommandLinkButton(self)
+        self.registerLink.setGeometry(QtCore.QRect(90, 150, 101, 41))
+        self.registerLink.setObjectName("registerLink")
 
 
         #Connecting to database
         dbConnect()
 
         self.loginButton.clicked.connect(lambda : self.auth(self.usernameLineEdit.text(),self.passwordLineEdit.text()))
+        self.registerLink.clicked.connect(self.show_register)
 
 
         self.retranslateUi()
@@ -59,6 +64,7 @@ class Login(QtWidgets.QWidget):
         self.usernameLabel.setText(_translate("Login", "Username:"))
         self.passwordLabel.setText(_translate("Login", "Password:"))
         self.loginButton.setText(_translate("Login", "Login"))
+        self.registerLink.setText(_translate("Login", "Register"))
 
     def auth(self,username,password):
         index = 0
@@ -67,6 +73,7 @@ class Login(QtWidgets.QWidget):
         query.bindValue(":username",username)
         query.bindValue(":password",password)
         query.exec_()
+        
 
         if query.next():
             #print(True,query.value("name"),query.value("isAdmin"))
@@ -83,6 +90,10 @@ class Login(QtWidgets.QWidget):
     def show_user(self,userId):
         self.window = UserWindow(userId)
         self.close()
+        self.window.show()
+
+    def show_register(self):
+        self.window = RegisterWindow()
         self.window.show()
 
 

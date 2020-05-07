@@ -24,6 +24,9 @@
     <Compile Include="AdminPanel.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Register.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="UserPanel.py">
       <SubType>Code</SubType>
     </Compile>

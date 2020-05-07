@@ -6,6 +6,12 @@ def dbConnect():
     db.setDatabaseName("Bus.db")
     if not db.open():
         QMessageBox.critical(None, "Cannot open database","Unable to establish a database connection.", QMessageBox.Cancel)
+        return
+    enableForeignKey()
+
+def enableForeignKey():
+    query = QSqlQuery()
+    query.exec_("PRAGMA foreign_keys=ON")
 
 def criticalMessage(message):
     msg = QMessageBox()
